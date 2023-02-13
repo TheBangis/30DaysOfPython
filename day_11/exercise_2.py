@@ -32,3 +32,53 @@ print(is_empty(()))
 
 # Number 4
 
+# calculate_mean
+
+def  calculate_mean(lst):
+   num_lst = len(lst)
+   add_lst = sum(lst)
+   mean = add_lst / num_lst
+   return mean
+print(calculate_mean([1,2,3,4]))
+
+# calculate median
+
+def calculate_median(lst):
+   lst.sort()
+   len_list = len(lst)
+   if len_list % 2 == 0:
+      median = (lst[len_list // 2] + lst[len_list // 2 - 1]) / 2
+      return median
+   else:
+      median = lst[len_list // 2]
+      return median
+print(calculate_median([3,4,5,1,6]))
+
+# calculate mode
+
+# calculate range
+def calculate_range(lst):
+   lst.sort()
+   rang = lst[-1] - lst[0]
+   return rang
+lists = [2,1,4,5,9]
+print(calculate_range(lists))
+
+# calculate variance
+
+# calculate standard deviation 
+
+ 
+
+
+
+
+
+   
+
+   
+   
+   
+
+   
+
