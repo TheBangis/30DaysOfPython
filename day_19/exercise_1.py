@@ -1,0 +1,5 @@
+f = open('./day_19/donal_speech.txt')
+txt = f.read()
+print(type(txt))
+print(txt)
+f.close()
