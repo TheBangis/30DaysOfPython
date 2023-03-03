@@ -1,5 +1,5 @@
 # 🐍  Arewa Data Science 30 Days Of Python  🐍
-### This repo covered the following topics in the table below.
+### This repo covered practical exercises of 30 Days Of Python, a requirement of becoming data scientist. below in the table are the topics covered so far.
 | Day | Topics                                                    |
 |------|:---------------------------------------------------------:|
 | 01  |  Introduction|
