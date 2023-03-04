@@ -25,3 +25,42 @@ count_number_lines('day_19/obama_speech.txt')
 count_number_lines('day_19/donald_speech.txt')
 count_number_lines('day_19/michelle_obama_speech.txt')
 
+
+'''
+Read the countries_data.json data file in data directory, create a function that finds the ten most spoken languages
+
+# Your output should look like this
+print(most_spoken_languages(filename='./data/countries_data.json', 10))
+[(91, 'English'),
+(45, 'French'),
+(25, 'Arabic'),
+(24, 'Spanish'),
+(9, 'Russian'),
+(9, 'Portuguese'),
+(8, 'Dutch'),
+(7, 'German'),
+(5, 'Chinese'),
+(4, 'Swahili'),
+(4, 'Serbian')]
+
+# Your output should look like this
+print(most_spoken_languages(filename='./data/countries_data.json', 3))
+[(91, 'English'),
+(45, 'French'),
+(25, 'Arabic')]
+'''
+def most_spoken_languages(file, n):
+    with open(file) as f:
+        list = json.loads(f.read())
+
+    languages = []
+    for i in range(len(list)):
+        languages.extend(list[i]['languages'])
+    lang = {}
+    for language in languages:
+        lang[language] = lang.get(language,0) + 1
+    # sorting the list of the tuples to get the most spoken languages
+    sorted = sorted(lang.items(), key= lambda x:x[1],reverse=True) # contains the languages arranged based on values
+    result = [(item[1],item[0]) for item in sorted]
+    return result[:n]
+print(most_spoken_languages('day_19/countries_data.json',3))
