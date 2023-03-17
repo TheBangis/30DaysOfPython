@@ -19,5 +19,5 @@ print(user_id_gen_by_user())
 
 # Number 3
 def rgb_color_gen():
-    return 'rgb('+ ','.join(str(randint(0, 255)) for i in range(3)) + ')'
+    return 'rgb('+ ','.join(str(randint(1, 255)) for i in range(3)) + ')'
 print(rgb_color_gen())
